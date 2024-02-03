@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center alert alert-danger">THIS IS CRUD PROJECT</h2>
+        <ul style="list-style-type: none;display: flex;margin-left: 370px;">
+        <a href="/" style="text-decoration: none;color: white;width: 100px;background-color: red;"><li>Add-Data</li></a>
+        <a href="/show/" style="text-decoration: none;color: white;width: 100px;background-color: red;"><li>Show-Data</li></a>
+        
+    </ul>
+        {% block content %}
+          
+        
+        {% endblock content %}
+    </div>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/popper.js' %}"></script>
+</body>
+</html>

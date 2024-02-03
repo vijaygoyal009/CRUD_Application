@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h4>Show Student Data</h4>
+  <table class="table table-hover">    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Password</th>
+        <th>Action</th>
+    </tr>
+    {% for d in data %}
+    <tr>
+          <td>{{d.id}}</td>
+          <td>{{d.name}}</td>
+          <td>{{d.email}}</td>
+          <td>{{d.password}}</td>
+          <td>
+            <a href="/{{d.id}}/" class="btn btn-warning btn-sm">Edit</a>
+            <a href="/delete/{{d.id}}/" class="btn btn-dangerf btn-sm">Delete</a>
+          </td>
+        </tr>
+        {% endfor %}
+        
+        
+          </table>
+{% endblock content %}
